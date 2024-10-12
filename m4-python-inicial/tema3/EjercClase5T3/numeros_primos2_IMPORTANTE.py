@@ -4,6 +4,7 @@ numbers = [3,5,3,5,7,1,3,5,12,3,23,5,132,543,3,2,32,4,45,2,4,12,3,31,2,32,12,3,]
 total_primos = 0
 primos = []
 suma_primos = 0
+
 #Bucle para recorrer lista
 for num in numbers:
     prime = True
