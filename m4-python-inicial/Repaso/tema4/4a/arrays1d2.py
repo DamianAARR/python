@@ -59,4 +59,3 @@ desv = np.std(array_aleatorio)
 print('Media:',media)
 print('Mediana:',mediana)
 print('Desviación:',desv.round(3))
-
