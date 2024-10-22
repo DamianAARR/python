@@ -323,8 +323,13 @@ my_array = np.array([4,5], dtype = np.int8) #Le decimos que solo sea de 8 bits
 my_array = np.array([4,5])
 print(my_array.shape) # Imprime --> (4, 5)  
 
+#Revertir un array
+array = np.arange(8) #Imprime: [0,1,2,3,4,5,6,7]
+revertido = np.flip(array) #Imprime: [7,6,5,4,3,2,1] (Si el array es de numpy)
+revertido = array[::-1]
+
 #Crear array con números aleatorios y longitud específica (NO NECESITAS IMPORTAR EL MÓDULO 'RANDOM')
-array_aleatorio = np.random.randint(10, size=(5)) #Si solo damos un valor es de 0 a ese valor. EJ: 0 a 10, y 5
+array_aleatorio = np.random.randint(10, size=(5)) #Si solo damos un valor al principio, cuenta de 0 a ese valor. EJ: 0 a 10, y longitud 5
 
 #Crear arrays unidad
 eye_array = np.eye(3) #Imprime [[1. 0. 0.]
@@ -457,8 +462,8 @@ array_numeros = np.array([1,0,5,3,8,0,0,5,6])
 np.count_nonzero(array_numeros) #Cuenta los elementos del array distintos de 0 #Imprime--> 6
 np.unique(array_numeros) #Devuelve los elementos únicos de un array #Imprime--> 0,1,3,5,6,8
 np.unique(array_numeros, return_counts=True) #El 'return_counts=True' te devuelve cuantas veces se repite cada elemento
-array_indices = np.array([3,7,4,9,1,6,5])
-np.argsort(array_indices) #Devuelve los índices de los elementos después de ser ordenados Imprime--> 3,0,2,6,5,1,3
+array_indices = np.array([3,7,4,9,1,6,5]) 
+np.argsort(array_indices) #Devuelve los índices de los elementos después de ser ordenados Imprime--> 4,0,2,6,5,1,3 
 
 
 #Manejar archivos con numpy
@@ -511,8 +516,9 @@ tupla_invertida = tuple(reversed(mi_tupla)) #Forma correcta: me devuelve una 'TU
 
 #Combinar tuplas
 mi_tupla2 = ('a','b','c','d','e')
-tupla_combinada = tuple(zip(subtupla,mi_tupla2)) #Imprime: ((1,'a'),(2,'b'),(3,'c'),()..)
-print(tupla_combinada[3][1]) #Acceder a elementos de una tupla de tuplas, Imprime: d
+tupla_combinada1 = subtupla + mi_tupla2 #Imprime: ('a','b','c','d','e', 1, 2, 3, 4, 5)
+tupla_combinada2 = tuple(zip(subtupla,mi_tupla2)) #Imprime: ((1,'a'),(2,'b'),(3,'c'),()..)
+print(tupla_combinada2[3][1]) #Acceder a elementos de una tupla de tuplas, Imprime: d
 
 #Slicing de tupla de tuplas
 tupla_tuplas = ((1,2,3),(4,5,6),(7,8,9))
