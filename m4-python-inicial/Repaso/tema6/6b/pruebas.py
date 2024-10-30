@@ -1,16 +1,10 @@
 
+datos = {'damian': 140, 'pepe': 150}
 
-#            key      value
-productos = {'1': {'pera':  20},
-             '2': {'mango': 50},
-             '3': {'fresa': 30},
-             }
+votos_totales = 0
+for votos in datos.values():
+    votos_totales += votos
 
-#             key   value
-producto1 = {'pera': 50}
-
-for numero, info in productos.items():
-    print('Número:',numero,'Info:',info)
-
-for numero,info in productos.items():
-    print()
+for clave, valor in datos.items():
+    porcentaje = valor * 100 / votos_totales
+    print(clave.title(),':',porcentaje.round(1),'%')
