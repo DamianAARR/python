@@ -311,6 +311,17 @@ caracteres_especiales = string.punctuation
 caracteres = string.ascii_letters + string.digits + string.punctuation
 combi = todas + numeros + caracteres_especiales #Es lo mismo
 
+#FUNCION ANY
+#El valor de 'any' es booleano. Comprueba si hay al menos un elemento True. Los elementos False son: valores vacíos, 0, None, False
+vocales = ['a','e','i'] 
+print(any(vocales)) #Imprime True. Si hay valores vacíos, número 0, None, False pero ningún valor diferente de los anteriores imprime False.
+
+vocal = 'a' #Con vocales a,e,i el valor de 'any' es True e imprime la primera opción. Con o,u el valor es False e imprime la segunda opción.
+if any(letra in vocales for letra in vocal): #(Dice por cada elemento en vocal, está ese elemento en vocales?). Lo que hace 'any' es que con que haya uno solo devuelve True.
+    print('La letra', vocal, 'está en la lista de vocales.')
+else:
+    print('La letra',vocal, 'no está en la lista')
+
 #NUMPY
 np.array() #Para crear array - Ej: my_array = np.array(0,1,2,3,4,5) o my_array = np.array([2,3])
 np.arange()  #Para crear array - Ej: my_array = np.arange(6) --> [0 1 2 3 4 5]
