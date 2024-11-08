@@ -1,8 +1,7 @@
+vocales = ['a','e','i'] 
 
-
-entrada = input('yes or not: ')
-
-if entrada in {'y','yes'}:
-    print(True)
+vocal = 'o'
+if any(letra in vocales for letra in vocal):
+    print('La letra', vocal, 'está en la lista de vocales.')
 else:
-    print(False)
+    print('La letra',vocal, 'no está en la lista')
